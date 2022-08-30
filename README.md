@@ -13,13 +13,22 @@
     APP_URL=https://{{current_domain_name}}
 
     //Доступные варианты генераторов json_generator, csv_generator, xml_generator
-    SITEMAP_GENERATOR=https://{{current_domain_name}}
+    SITEMAP_GENERATOR=xml_generator
     ...
  ```   
 * Реализовать класс для интерфейса (Класс должен возвращать массив с данными страниц заданного формата)
 
 ```
     \KatalinKS\Sitemap\Contracts\SitemapDataContract
+```
+* Зарегистрировать реализацию в сервис провайдере
+
+```
+    use KatalinKS\Sitemap\Contracts\SitemapDataContract;
+    
+    ...
+    $this->app->singleton(SitemapDataContract::class, SitemapData::class);
+    ...
 ```
 ## Запуск
 
