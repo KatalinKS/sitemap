@@ -1,0 +1,30 @@
+{
+    "name": "katalinks/sitemap",
+    "description": "Sitemap generator",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Skej",
+            "email": "konstantin@katalin.ru",
+            "homepage": "https://github.com/KatalinKS"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KatalinKS\\Sitemap\\SitemapServiceProvider"
+            ]
+        }
+    },
+
+    "autoload": {
+        "psr-4": {
+            "KatalinKS\\Sitemap\\": "src"
+        }
+    }
+}
